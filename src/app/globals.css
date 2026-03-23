@@ -121,10 +121,17 @@
   * {
     @apply border-border outline-ring/50;
   }
-  body {
-    @apply bg-background text-foreground;
-  }
+
   html {
     @apply font-sans;
+    font-size: 10px;
   }
+
+  body {
+    @apply bg-background text-foreground;
+    line-height: 1.6;
+  }
+}
+html {
+  scroll-behavior: smooth;
 }
