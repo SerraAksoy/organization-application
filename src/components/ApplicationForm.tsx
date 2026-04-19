@@ -10,7 +10,7 @@ type FormData = {
     fieldOfStudy: string;
     participationType: string;
     motivation: string;
-    website: string; // honeypot
+    website: string;
 };
 
 type Errors = Partial<Record<keyof FormData, string>>;
@@ -122,90 +122,55 @@ export default function ApplicationForm() {
     }
 
     return (
-        <form className="space-y-5" onSubmit={handleSubmit}>
+        <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="grid gap-5 md:grid-cols-2">
-                <div>
-                    <label className="mb-2 block text-sm font-medium text-slate-700">
-                        Full Name *
-                    </label>
-                    <input
-                        name="fullName"
-                        value={formData.fullName}
-                        onChange={handleChange}
-                        type="text"
-                        placeholder="Enter your full name"
-                        className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm outline-none transition focus:border-indigo-400 focus:bg-white"
-                    />
-                    {errors.fullName && (
-                        <p className="mt-2 text-sm text-rose-600">{errors.fullName}</p>
-                    )}
-                </div>
+                <InputField
+                    label="Full Name *"
+                    name="fullName"
+                    value={formData.fullName}
+                    onChange={handleChange}
+                    placeholder="Enter your full name"
+                    error={errors.fullName}
+                />
 
-                <div>
-                    <label className="mb-2 block text-sm font-medium text-slate-700">
-                        Email Address *
-                    </label>
-                    <input
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        type="email"
-                        placeholder="Enter your email"
-                        className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm outline-none transition focus:border-indigo-400 focus:bg-white"
-                    />
-                    {errors.email && (
-                        <p className="mt-2 text-sm text-rose-600">{errors.email}</p>
-                    )}
-                </div>
+                <InputField
+                    label="Email Address *"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="Enter your email"
+                    error={errors.email}
+                    type="email"
+                />
             </div>
 
             <div className="grid gap-5 md:grid-cols-2">
-                <div>
-                    <label className="mb-2 block text-sm font-medium text-slate-700">
-                        University / Organization
-                    </label>
-                    <input
-                        name="university"
-                        value={formData.university}
-                        onChange={handleChange}
-                        type="text"
-                        placeholder="Your university or organization"
-                        className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm outline-none transition focus:border-indigo-400 focus:bg-white"
-                    />
-                </div>
+                <InputField
+                    label="University / Organization"
+                    name="university"
+                    value={formData.university}
+                    onChange={handleChange}
+                    placeholder="Your university or organization"
+                />
 
-                <div>
-                    <label className="mb-2 block text-sm font-medium text-slate-700">
-                        Country *
-                    </label>
-                    <input
-                        name="country"
-                        value={formData.country}
-                        onChange={handleChange}
-                        type="text"
-                        placeholder="Your country"
-                        className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm outline-none transition focus:border-indigo-400 focus:bg-white"
-                    />
-                    {errors.country && (
-                        <p className="mt-2 text-sm text-rose-600">{errors.country}</p>
-                    )}
-                </div>
+                <InputField
+                    label="Country *"
+                    name="country"
+                    value={formData.country}
+                    onChange={handleChange}
+                    placeholder="Your country"
+                    error={errors.country}
+                />
             </div>
 
             <div className="grid gap-5 md:grid-cols-2">
-                <div>
-                    <label className="mb-2 block text-sm font-medium text-slate-700">
-                        Field of Study
-                    </label>
-                    <input
-                        name="fieldOfStudy"
-                        value={formData.fieldOfStudy}
-                        onChange={handleChange}
-                        type="text"
-                        placeholder="e.g. Aerospace Engineering"
-                        className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm outline-none transition focus:border-indigo-400 focus:bg-white"
-                    />
-                </div>
+                <InputField
+                    label="Field of Study"
+                    name="fieldOfStudy"
+                    value={formData.fieldOfStudy}
+                    onChange={handleChange}
+                    placeholder="e.g. Aerospace Engineering"
+                />
 
                 <div>
                     <label className="mb-2 block text-sm font-medium text-slate-700">
@@ -215,7 +180,7 @@ export default function ApplicationForm() {
                         name="participationType"
                         value={formData.participationType}
                         onChange={handleChange}
-                        className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm outline-none transition focus:border-indigo-400 focus:bg-white"
+                        className="w-full rounded-2xl border border-[#D7E8F7] bg-[#F5FBFF] px-4 py-3 text-sm outline-none transition focus:border-[#00AEEF] focus:bg-white"
                     >
                         <option value="">Choose an option</option>
                         <option value="Student">Student</option>
@@ -224,7 +189,9 @@ export default function ApplicationForm() {
                         <option value="Participant">Participant</option>
                     </select>
                     {errors.participationType && (
-                        <p className="mt-2 text-sm text-rose-600">{errors.participationType}</p>
+                        <p className="mt-2 text-sm text-rose-600">
+                            {errors.participationType}
+                        </p>
                     )}
                 </div>
             </div>
@@ -237,30 +204,20 @@ export default function ApplicationForm() {
                     name="motivation"
                     value={formData.motivation}
                     onChange={handleChange}
-                    placeholder="Tell us briefly why you would like to join this program"
                     rows={6}
-                    className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm outline-none transition focus:border-indigo-400 focus:bg-white"
+                    placeholder="Tell us briefly why you would like to join this program"
+                    className="w-full rounded-2xl border border-[#D7E8F7] bg-[#F5FBFF] px-4 py-3 text-sm outline-none transition focus:border-[#00AEEF] focus:bg-white"
                 />
                 {errors.motivation && (
-                    <p className="mt-2 text-sm text-rose-600">{errors.motivation}</p>
+                    <p className="mt-2 text-sm text-rose-600">
+                        {errors.motivation}
+                    </p>
                 )}
             </div>
 
-            {/* Honeypot spam field */}
-            <div className="hidden">
-                <label>Website</label>
-                <input
-                    name="website"
-                    value={formData.website}
-                    onChange={handleChange}
-                    type="text"
-                    autoComplete="off"
-                    tabIndex={-1}
-                />
-            </div>
-
-            <div className="rounded-2xl border border-indigo-100 bg-indigo-50/60 p-4">
-                <p className="text-sm text-slate-600">
+            {/* Info box */}
+            <div className="rounded-2xl border border-[#D7E8F7] bg-[#EAF7FF] p-4">
+                <p className="text-sm text-[#003A8F]">
                     Your application will be submitted directly through this website.
                 </p>
             </div>
@@ -269,7 +226,7 @@ export default function ApplicationForm() {
                 <div
                     className={`rounded-2xl p-4 text-sm ${
                         success
-                            ? "border border-emerald-200 bg-emerald-50 text-emerald-700"
+                            ? "border border-[#00AEEF]/30 bg-[#EAF7FF] text-[#003A8F]"
                             : "border border-rose-200 bg-rose-50 text-rose-700"
                     }`}
                 >
@@ -281,7 +238,7 @@ export default function ApplicationForm() {
                 <button
                     type="submit"
                     disabled={loading}
-                    className="inline-flex min-w-[180px] items-center justify-center rounded-full bg-indigo-600 px-6 py-3 font-medium text-white transition hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-70"
+                    className="inline-flex min-w-[180px] items-center justify-center rounded-full bg-[#003A8F] px-6 py-3 font-medium text-white transition hover:bg-[#002d6e] disabled:opacity-70"
                 >
                     {loading ? (
                         <span className="flex items-center gap-2">
@@ -298,5 +255,33 @@ export default function ApplicationForm() {
                 </p>
             </div>
         </form>
+    );
+}
+
+/* reusable input */
+function InputField({
+                        label,
+                        name,
+                        value,
+                        onChange,
+                        placeholder,
+                        error,
+                        type = "text",
+                    }: any) {
+    return (
+        <div>
+            <label className="mb-2 block text-sm font-medium text-slate-700">
+                {label}
+            </label>
+            <input
+                name={name}
+                value={value}
+                onChange={onChange}
+                type={type}
+                placeholder={placeholder}
+                className="w-full rounded-2xl border border-[#D7E8F7] bg-[#F5FBFF] px-4 py-3 text-sm outline-none transition focus:border-[#00AEEF] focus:bg-white"
+            />
+            {error && <p className="mt-2 text-sm text-rose-600">{error}</p>}
+        </div>
     );
 }
