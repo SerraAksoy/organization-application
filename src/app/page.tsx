@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import {
     Accordion,
     AccordionContent,
@@ -17,17 +18,17 @@ const features = [
     {
         title: "Learning Opportunities",
         description:
-            "Join curated sessions, workshops, and collaborative activities designed to support your personal and professional growth.",
+            "Join curated sessions, workshops, and collaborative activities designed to support your personal and professional growth.(To be changed.)",
     },
     {
         title: "Global Network",
         description:
-            "Connect with ambitious students, organizers, and participants from different backgrounds in an international environment.",
+            "Connect with ambitious students, organizers, and participants from different backgrounds in an international environment.(To be changed.)",
     },
     {
         title: "Hands-on Experience",
         description:
-            "Take part in real organizational activities and gain practical experience through active contribution.",
+            "Take part in real organizational activities and gain practical experience through active contribution.(To be changed.)",
     },
 ];
 
@@ -53,21 +54,21 @@ const faqs = [
     {
         question: "Who can apply?",
         answer:
-            "The program is open to university students and recent graduates from diverse academic backgrounds.",
+            "The program is open to any EUROAVIA members from diverse academic backgrounds.",
     },
     {
         question: "Is there an application fee?",
-        answer: "No. The application process is completely free.",
+        answer: "Yes. 100 Euros will be paid to the organizing team after the application confirmation. This is required to cover the expanses of the program.",
     },
     {
-        question: "Will the event be online or in person?",
+        question: "How can I get to Eskişehir?",
         answer:
-            "The final format will be announced later. A hybrid structure is currently planned for this demo version.",
+            "You can get to Eskişehir from either İstanbul or Ankara via Bus/Train. Otherwise you can get a ticket from Brussels to our university campus directly. \n",
     },
     {
-        question: "When will results be announced?",
+        question: " I have more questions about transportation.",
         answer:
-            "Applicants will be informed after the evaluation process is completed.",
+            "You can contact us anytime on Instagram. Our organizing team will also reach out after your application is confirmed to assist you with tickets.\n",
     },
 ];
 
@@ -75,6 +76,7 @@ const navItems = [
     { label: "Home", href: "#home" },
     { label: "About", href: "#program" },
     { label: "Process", href: "#process" },
+    { label: "Schedule", href: "#schedule" },
     { label: "FAQ", href: "#faq" },
     { label: "Apply", href: "#application" },
     { label: "Location", href: "#location" },
@@ -184,19 +186,23 @@ export default function Home() {
                             </Badge>
 
                             <h1 className="mt-6 max-w-2xl text-4xl font-bold leading-tight tracking-tight text-[#003A8F] md:text-6xl">
-                                Join a global program built for future innovators.
+                                Ready for take off: ESKİŞEHİR
                             </h1>
 
                             <p className="mt-6 max-w-xl text-base leading-7 text-slate-600 md:text-lg">
-                                This international program brings together motivated students and
-                                young talents through learning-focused sessions, collaborative
-                                experiences, and meaningful community engagement.
+                                <span className="font-semibold text-[#003A8F]"> Welcome to Eskişehir! </span> A city
+                                full of life, where colorful streets, riverside views and a vibrant
+                                student culture create an inspiring atmosphere for connection and discovery. EUROAVIA
+                                Eskişehir
+                                looks forward to welcoming you to AEROLink26. Join us for a week where ideas take
+                                flight, connections
+                                grow stronger, and Turkish hospitality makes every moment memorable.
                             </p>
 
                             <div className="mt-6 flex flex-wrap gap-6 text-sm text-slate-500">
-                                <div>📍 Europe / Hybrid</div>
-                                <div>📅 Summer 2026</div>
-                                <div>🎓 Students & Recent Graduates</div>
+                                <div>📍 Eskişehir / TÜRKİYE</div>
+                                <div>📅 2026 October</div>
+                                <div>🎓 EUROAVIA members</div>
                             </div>
 
                             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -215,64 +221,72 @@ export default function Home() {
                                         Explore Program
                                     </Button>
                                 </a>
+                                <a href="https://eskisehir.ktb.gov.tr/EN-222723/promotional-films-of-eskisehir.html">
+                                    <Button
+                                        variant="outline"
+                                        className="rounded-full border-[#D7E8F7] bg-white px-5 py-6 text-[#003A8F] hover:bg-[#F5FBFF]"
+                                    >
+                                        About Eskişehir
+                                    </Button>
+                                </a>
                             </div>
 
                             <div className="mt-10 flex flex-wrap gap-8">
                                 <div>
-                                    <p className="text-3xl font-bold text-[#003A8F]">200+</p>
+                                    <p className="text-3xl font-bold text-[#003A8F]">20+</p>
                                     <p className="mt-1 text-sm text-slate-500">Participants</p>
+                                </div>
+
+                                <div>
+                                    <p className="text-3xl font-bold text-[#003A8F]">15+</p>
+                                    <p className="mt-1 text-sm text-slate-500">Team Members</p>
                                 </div>
 
                                 <div>
                                     <p className="text-3xl font-bold text-[#003A8F]">10+</p>
                                     <p className="mt-1 text-sm text-slate-500">Activities</p>
                                 </div>
-
-                                <div>
-                                    <p className="text-3xl font-bold text-[#003A8F]">20+</p>
-                                    <p className="mt-1 text-sm text-slate-500">Team Members</p>
-                                </div>
                             </div>
 
-                            <div className="mt-12 grid gap-4 md:grid-cols-3">
+                            <div className="mt-10 grid gap-2 md:grid-cols-3">
                                 <div
                                     className="rounded-2xl border border-[#D7E8F7] bg-white/90 p-5 shadow-sm backdrop-blur transition hover:-translate-y-1 hover:shadow-md">
                                     <p className="text-xs uppercase tracking-[0.2em] text-[#00AEEF]">
-                                        Format
+                                        Registration
                                     </p>
                                     <h3 className="mt-2 text-lg font-semibold text-[#003A8F]">
-                                        Hybrid Event
+                                        Participation FEE
                                     </h3>
                                     <p className="mt-1 text-sm text-slate-600">
-                                        Designed for both online and in-person participation.
+                                        €100 participation fee (4 nights of accommodation, 3 meal days, Spirits Nights,
+                                        Welcome & Farewell Dinner)
                                     </p>
                                 </div>
 
                                 <div
                                     className="rounded-2xl border border-[#D7E8F7] bg-white/90 p-5 shadow-sm backdrop-blur transition hover:-translate-y-1 hover:shadow-md">
                                     <p className="text-xs uppercase tracking-[0.2em] text-[#00AEEF]">
-                                        Theme
+                                        Program
                                     </p>
                                     <h3 className="mt-2 text-lg font-semibold text-[#003A8F]">
-                                        Innovation & Community
+                                        Program Events
                                     </h3>
                                     <p className="mt-1 text-sm text-slate-600">
-                                        Built around collaboration, growth, and active contribution.
+                                        EXPO, University Tour, HÜRKUŞ Museum Visit, Seminars
                                     </p>
                                 </div>
 
                                 <div
                                     className="rounded-2xl border border-[#D7E8F7] bg-white/90 p-5 shadow-sm backdrop-blur transition hover:-translate-y-1 hover:shadow-md">
                                     <p className="text-xs uppercase tracking-[0.2em] text-[#00AEEF]">
-                                        Application
+                                        Social Program
                                     </p>
                                     <h3 className="mt-2 text-lg font-semibold text-[#003A8F]">
-                                        Open Now
+                                        Free Time Activities
                                     </h3>
                                     <p className="mt-1 text-sm text-slate-600">
-                                        Submit your application and join the next generation of
-                                        innovators.
-                                    </p>
+                                        Odunpazarı Houses, Sazova Park Tour, Papercraft Challenge, Additional surprise
+                                        activities</p>
                                 </div>
                             </div>
                         </div>
@@ -289,7 +303,7 @@ export default function Home() {
                                     <div className="grid gap-4 sm:grid-cols-2">
                                         <div className="sm:col-span-2">
                                             <img
-                                                src="/aerolink2.png"
+                                                src="/eskisehir.png"
                                                 alt="Event showcase"
                                                 className="h-72 w-full rounded-[1.5rem] object-cover"
                                             />
@@ -297,40 +311,48 @@ export default function Home() {
 
 
                                         <div className="rounded-[1.5rem] bg-slate-50 p-5 ring-1 ring-[#D7E8F7]">
-                                            <p className="text-sm text-slate-500">Community</p>
+                                            <p className="text-sm text-slate-500">Networking</p>
                                             <h3 className="mt-2 text-xl font-semibold text-[#003A8F]">
-                                                Build connections
+                                                Build Meaningful Connections
                                             </h3>
                                             <p className="mt-2 text-sm leading-6 text-slate-600">
-                                                Become part of a vibrant environment shaped by teamwork,
-                                                communication, and shared ambition.
+                                                Connect with aviation students and professionals from across Europe and
+                                                beyond.
+                                                Expand your network, share ideas, and create lasting international
+                                                friendships.
                                             </p>
                                         </div>
 
                                         <div className="rounded-[1.5rem] bg-slate-50 p-5 ring-1 ring-[#D7E8F7]">
                                             <p className="text-sm text-slate-500">Experience</p>
                                             <h3 className="mt-2 text-xl font-semibold text-[#003A8F]">
-                                                Contribute actively
+                                                Discover Eskişehir
                                             </h3>
                                             <p className="mt-2 text-sm leading-6 text-slate-600">
-                                                Go beyond attendance and gain value by actively taking
-                                                part in the program journey.
+                                                Immerse yourself in the local culture, explore the city's vibrant social
+                                                life,
+                                                and experience the unique atmosphere that makes Eskişehir truly
+                                                unforgettable.
                                             </p>
                                         </div>
                                     </div>
 
                                     <div className="mt-4 flex flex-wrap gap-3">
                                         <div
-                                            className="rounded-full bg-[#EAF7FF] px-4 py-2 text-xs font-medium text-[#003A8F] ring-1 ring-[#D7E8F7]">
-                                            International Community
+                                            className="rounded-full bg-[#EAF7FF] px-3 py-2 text-xs font-medium text-[#003A8F] ring-1 ring-[#D7E8F7]">
+                                            #International Event
                                         </div>
                                         <div
                                             className="rounded-full bg-[#EAF7FF] px-4 py-2 text-xs font-medium text-[#00AEEF] ring-1 ring-[#D7E8F7]">
-                                            Summer 2026
+                                            #PASEskisehir
                                         </div>
                                         <div
                                             className="rounded-full bg-slate-100 px-4 py-2 text-xs font-medium text-slate-700 ring-1 ring-slate-200">
-                                            Open Application
+                                            #October 2026
+                                        </div>
+                                        <div
+                                            className="rounded-full bg-[#EAF7FF] px-4 py-2 text-xs font-medium text-[#00AEEF] ring-1 ring-[#D7E8F7]">
+                                            #EUROAVIA
                                         </div>
                                     </div>
                                 </CardContent>
@@ -423,7 +445,7 @@ export default function Home() {
 
                     <div className="grid gap-6">
                         <img
-                            src="/aerolink3.png"
+                            src="/aerolink2.png"
                             alt="Team collaboration"
                             className="h-56 w-full rounded-[2rem] object-cover shadow-sm ring-1 ring-[#D7E8F7]"
                         />
@@ -465,6 +487,30 @@ export default function Home() {
                                 </div>
                             ))}
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <section
+                id="schedule"
+                className="mx-auto max-w-7xl px-6 py-24 md:px-10 lg:px-16"
+            >
+                <div className="text-center">
+                    <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#00AEEF]">
+                        Schedule
+                    </p>
+
+                    <h2 className="mt-4 text-4xl font-bold tracking-tight text-[#003A8F] md:text-5xl">
+                        Event Schedule
+                    </h2>
+
+                    <p className="mt-6 text-lg text-slate-500">
+                        The detailed program will be announced soon.
+                    </p>
+
+                    <div
+                        className="mt-8 inline-flex items-center rounded-full border border-[#D7E8F7] bg-[#F5FBFF] px-6 py-3 text-sm font-medium text-[#003A8F] shadow-[0_0_25px_rgba(0,174,239,0.15)]">
+                        To be announced
                     </div>
                 </div>
             </section>
@@ -606,20 +652,48 @@ export default function Home() {
                 <div className="mx-auto grid max-w-7xl gap-8 px-6 py-10 text-sm text-slate-600 md:grid-cols-3">
                     <div>
                         <h3 className="mb-2 font-semibold text-[#003A8F]">Organization</h3>
+                        <p> EUROAVIA PAS Eskişehir</p>
+                        <p>Aerolink26</p>
                         <p>International Program</p>
                     </div>
 
                     <div>
                         <h3 className="mb-2 font-semibold text-[#003A8F]">Contact</h3>
-                        <p>Email: info@organization.com</p>
-                        <p>Phone: +90 551 989 01 99</p>
+                        <p>Email: suhangoktug@gmail.com
+                        </p>
+                        <p>Phone: +49 163 3699046 </p>
+
+                        <p>Email: belinaybinat@gmail.com
+                        </p>
+                        <p>Phone: +90 553 960 12 31</p>
+                    </div>
+                    <div>
+                        <h3 className="mb-3 font-semibold text-[#003A8F]">Social</h3>
+
+                        <div className="flex items-center gap-3">
+                            <a
+                                href="https://www.instagram.com/euroaviaeskisehir/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Instagram"
+                                className="flex h-11 w-11 items-center justify-center rounded-full border border-[#D7E8F7] bg-[#F5FBFF] text-[#003A8F] transition hover:-translate-y-1 hover:border-[#00AEEF] hover:bg-[#EAF7FF] hover:text-[#00AEEF]"
+                            >
+                                <FaInstagram size={18}/>
+                            </a>
+
+                            <a
+                                href="https://www.linkedin.com/company/euroavia-eskişehir/posts/?feedView=all"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="LinkedIn"
+                                className="flex h-11 w-11 items-center justify-center rounded-full border border-[#D7E8F7] bg-[#F5FBFF] text-[#003A8F] transition hover:-translate-y-1 hover:border-[#00AEEF] hover:bg-[#EAF7FF] hover:text-[#00AEEF]"
+                            >
+                                <FaLinkedinIn size={18}/>
+                            </a>
+                        </div>
                     </div>
 
-                    <div>
-                        <h3 className="mb-2 font-semibold text-[#003A8F]">Social</h3>
-                        <p>Instagram</p>
-                        <p>LinkedIn</p>
-                    </div>
+
                 </div>
             </footer>
         </main>
